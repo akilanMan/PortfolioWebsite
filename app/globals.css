@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-ink: 10 10 10;
+  --color-paper: 248 248 247;
+  --color-line: 212 212 212;
+  --color-muted: 110 110 110;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-ink: 239 239 239;
+  --color-paper: 12 12 12;
+  --color-line: 58 58 58;
+  --color-muted: 170 170 170;
+}
+
+* {
+  border-color: rgb(var(--color-line));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at 10% 10%, rgb(255 255 255), rgb(var(--color-paper)) 42%, rgb(235 235 235) 100%);
+  color: rgb(var(--color-ink));
+  text-rendering: geometricPrecision;
+  transition: background 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark body {
+  background: radial-gradient(circle at 10% 10%, rgb(24 24 24), rgb(var(--color-paper)) 42%, rgb(6 6 6) 100%);
+}
+
+::selection {
+  background: rgb(var(--color-ink));
+  color: rgb(var(--color-paper));
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: pageEnter 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-enter {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+  }
+}
