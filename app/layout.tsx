@@ -6,10 +6,10 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'Akilan Manivannan | Software Engineer',
-  description: 'Portfolio of Akilan Manivannan - Software Engineer with focus in Data Science and ML.',
+  title: 'akilan | software engineer',
+  description: 'portfolio of akilan.',
   openGraph: {
-    title: 'Akilan Manivannan | Portfolio',
+    title: 'Aakilan | software engineer',
     description: 'Software Engineer + Data Science / ML projects and experience.',
     type: 'website',
     url: 'https://example.com',
@@ -18,15 +18,30 @@ export const metadata: Metadata = {
         url: 'https://example.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Akilan Manivannan Portfolio'
+        alt: 'akilan'
       }
     ]
   }
 };
 
+const themeInitScript = `
+(() => {
+  try {
+    const stored = localStorage.getItem('theme');
+    const isDark = stored ? stored === 'dark' : true;
+    document.documentElement.classList.toggle('dark', isDark);
+  } catch {
+    document.documentElement.classList.add('dark');
+  }
+})();
+`;
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

@@ -24,9 +24,10 @@ export type ProjectItem = {
 
 export const siteData = {
   identity: {
-    name: 'Akilan Manivannan',
-    title: 'Software Engineer',
-    subtitle: 'Data Science / ML',
+    name: 'akilan',
+    title: 'software engineer',
+    subtitle: 'Data Science',
+    headshot: '/selfie.jpg',
     email: 'akilan.manivannan@gmail.com',
     linkedin: 'AkilanManivannan',
     github: 'akilanMan',
@@ -40,8 +41,8 @@ export const siteData = {
     { label: 'Contact', href: '#contact' }
   ] as NavItem[],
   about: {
-    bio: 'Engineer focused on building production systems that blend software fundamentals with data and ML workflows. I like turning complex, cross-system problems into clear products that teams can rely on.',
-    education: {
+      bio: "Hi! I'm a new grad software engineer passionate about building thoughtful software that combines strong engineering fundamentals with data and machine learning. I enjoy taking ideas from concept to working, whether that's designing backend architecture, designing new apps, or experimenting with ML models. I always love a challenge and expanding my horizons.",    
+      education: {
       school: 'Rutgers University',
       degree: 'B.S. Computer Science, Minor in Data Science',
       location: 'New Brunswick, NJ',
@@ -81,13 +82,23 @@ export const siteData = {
         'Engineered asynchronous RESTful API services using Spring and Microsoft SQL Server to manage and update the database, resulting in an efficient and fast data pipeline.',
         'Leveraged CI/CD GitHub Actions to collaborate, merge, and deploy applications while tracking delivery with JIRA.'
       ]
+    },
+    {
+      company: 'Rutgers IEEE IGVC',
+      role: 'Developer',
+      location: 'New Brunswick, NJ',
+      period: 'September 2022 to Dec 2025',
+      bullets: [
+        'Engineered an autonomous ground vehicle to compete against 100+ universities globally, adhering to stringent performance, safety, and regulatory guidelines through hardware-software integration.',
+        'Utilized Python, ROS, and computer vision algorithms to build an integrated system for navigation, line, and object detection, achieving efficient and precise autonomous driving in dynamic environments.'
+      ]
     }
   ] as ExperienceItem[],
   projects: [
     {
       name: 'Rutgers IEEE IGVC',
       role: 'Developer',
-      period: 'Sep 2022 to Dec 2025',
+      period: 'Club',
       summary: 'Autonomous ground vehicle work across hardware and software under strict performance and safety constraints.',
       bullets: [
         'Engineered an autonomous ground vehicle to compete against 100+ universities globally with hardware-software integration under performance and safety constraints.',
@@ -98,7 +109,6 @@ export const siteData = {
     },
     {
       name: 'JobHackR',
-      role: 'Full-Stack Developer',
       period: 'Independent Project',
       summary: 'NLP-powered internship ranking platform that maps resume relevance to job listings.',
       bullets: [
@@ -110,7 +120,6 @@ export const siteData = {
     },
     {
       name: 'Sector News Scanner',
-      role: 'Full-Stack Developer',
       period: 'Independent Project',
       summary: 'Explainable stock watchlist engine combining sentiment, catalysts, and market indicators.',
       bullets: [

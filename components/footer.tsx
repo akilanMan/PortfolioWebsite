@@ -10,7 +10,7 @@ export function Footer({ email, linkedin, github }: FooterProps) {
   return (
     <footer id="contact" className="border-t border-line/70">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-12 lg:px-8">
-        <h2 className="font-serif text-3xl">Let&apos;s build something meaningful.</h2>
+        <h2 className="font-serif text-3xl">connect with me! i am constantly looking to expand my circle</h2>
         <Link href={`mailto:${email}`} className="focus-ring w-fit text-base text-muted underline-offset-4 hover:text-ink hover:underline">
           {email}
         </Link>

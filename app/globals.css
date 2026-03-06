@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -35,6 +36,14 @@ body {
 
 .dark body {
   background: radial-gradient(circle at 10% 10%, rgb(24 24 24), rgb(var(--color-paper)) 42%, rgb(6 6 6) 100%);
+}
+
+main > section,
+footer#contact {
+  min-height: calc(100svh - 4rem);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-margin-top: 4rem;
 }
 
 ::selection {
@@ -60,6 +69,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+    scroll-snap-type: none;
   }
 
   .page-enter {

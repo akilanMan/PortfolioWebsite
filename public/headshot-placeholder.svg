@@ -1,0 +1,7 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="900" rx="32" fill="#111111"/>
+  <rect x="40" y="40" width="640" height="820" rx="24" fill="#1f1f1f" stroke="#3a3a3a" stroke-width="2"/>
+  <circle cx="360" cy="330" r="130" fill="#2d2d2d"/>
+  <path d="M170 730C170 616.229 257.229 529 371 529H349C462.771 529 550 616.229 550 730V730H170V730Z" fill="#2d2d2d"/>
+  <text x="360" y="820" fill="#b5b5b5" font-family="Arial, sans-serif" font-size="30" text-anchor="middle">Add headshot here</text>
+</svg>

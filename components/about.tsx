@@ -12,7 +12,7 @@ type AboutProps = {
 export function About({ bio, school, degree, location, coursework }: AboutProps) {
   return (
     <section id="about" className="mx-auto w-full max-w-6xl px-6 py-24 lg:px-8">
-      <SectionHeading eyebrow="About" title="A focused, product-minded engineer" />
+      <SectionHeading eyebrow="About" title="Who am I?" />
       <div className="grid gap-8 lg:grid-cols-[1.35fr_1fr]">
         <Reveal>
           <p className="text-base leading-relaxed text-muted sm:text-lg">{bio}</p>

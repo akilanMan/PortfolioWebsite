@@ -29,7 +29,7 @@ export function Experience({ items }: ExperienceProps) {
         </div>
       </div>
 
-      <SectionHeading eyebrow="Experience" title="Shipped in enterprise and product environments" />
+      <SectionHeading eyebrow="Experience" title="My Career" />
 
       <div className="relative pl-8 sm:pl-10">
         <div className="absolute bottom-0 left-1.5 top-0 w-px bg-line sm:left-2" aria-hidden />

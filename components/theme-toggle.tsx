@@ -5,16 +5,16 @@ import { useEffect, useState } from 'react';
 type Theme = 'light' | 'dark';
 
 function getPreferredTheme(): Theme {
-  if (typeof window === 'undefined') return 'light';
+  if (typeof window === 'undefined') return 'dark';
 
   const stored = window.localStorage.getItem('theme');
   if (stored === 'light' || stored === 'dark') return stored;
 
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'dark';
 }
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('dark');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export function ThemeToggle() {
       aria-label={mounted && theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
       aria-pressed={mounted && theme === 'dark'}
     >
-      {mounted ? (theme === 'dark' ? 'Light' : 'Dark') : 'Theme'}
+      {mounted ? (theme === 'dark' ? 'Light' : 'Dark') : 'Light'}
     </button>
   );
 }

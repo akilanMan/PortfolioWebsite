@@ -32,7 +32,7 @@ export function Projects({ projects }: ProjectsProps) {
 
   return (
     <section id="projects" className="mx-auto w-full max-w-6xl px-6 py-24 lg:px-8">
-      <SectionHeading eyebrow="Projects" title="Selected work" description="A compact set of projects focused on autonomy, NLP workflows, and data-driven product design." />
+      <SectionHeading eyebrow="Projects" title="Projects" description="independent projects where I experiment with new technologies and build applications around problems and ideas that interest me" />
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((project, index) => (
           <motion.article

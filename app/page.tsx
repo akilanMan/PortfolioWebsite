@@ -4,6 +4,7 @@ import { Footer } from '@/components/footer';
 import { Hero } from '@/components/hero';
 import { Navbar } from '@/components/navbar';
 import { Projects } from '@/components/projects';
+import { ScrollIndicator } from '@/components/scroll-indicator';
 import { Skills } from '@/components/skills';
 import { siteData } from '@/data/siteData';
 
@@ -17,6 +18,7 @@ export default function Home() {
       </a>
 
       <Navbar name={identity.name} navItems={nav} />
+      <ScrollIndicator />
 
       <div className="page-enter">
         <main id="main-content">
@@ -24,6 +26,7 @@ export default function Home() {
             name={identity.name}
             title={identity.title}
             subtitle={identity.subtitle}
+            headshot={identity.headshot}
             location={identity.location}
             linkedin={identity.linkedin}
             github={identity.github}
