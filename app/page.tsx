@@ -2,6 +2,7 @@ import { About } from '@/components/about';
 import { Experience } from '@/components/experience';
 import { Footer } from '@/components/footer';
 import { Hero } from '@/components/hero';
+import { IntroShell } from '@/components/intro-shell';
 import { Navbar } from '@/components/navbar';
 import { Projects } from '@/components/projects';
 import { ScrollIndicator } from '@/components/scroll-indicator';
@@ -17,10 +18,10 @@ export default function Home() {
         Skip to content
       </a>
 
-      <Navbar name={identity.name} navItems={nav} />
-      <ScrollIndicator />
+      <IntroShell>
+        <Navbar name={identity.name} navItems={nav} />
+        <ScrollIndicator />
 
-      <div className="page-enter">
         <main id="main-content">
           <Hero
             name={identity.name}
@@ -44,7 +45,7 @@ export default function Home() {
         </main>
 
         <Footer email={identity.email} linkedin={identity.linkedin} github={identity.github} />
-      </div>
+      </IntroShell>
     </div>
   );
 }
